@@ -1,0 +1,115 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding-left: 10px;
+  background-color: #eaedf0;
+  
+}
+
+.container-slide{
+  margin-top: 250px;
+  margin-bottom: 250px;
+  background-color: #ffffff;
+  margin-left: 60px;
+  margin-right: 30px;
+}
+
+.servicesheading {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  color: #FFC40A;
+  margin-right: 40px;
+
+  
+}
+
+.image-slide {
+  height: 30vw;
+  width: 30vw;
+  object-fit: cover;
+}
+
+.swiper {
+  cursor: grab;
+}
+
+.swiper::before,
+.swiper::after {
+  z-index: 2;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+  width: 800vw;
+  height: 800vw;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.swiper::before {
+  top: -795vw;
+}
+
+.swiper::after {
+  bottom: -795vw;
+}
+
+.inner-column .portfolio-btn {
+  border-radius: 5%;
+  padding: 15px 30px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 2px solid #ff8800;
+}
+
+
+.inner-column .portfolio-btn:hover {
+  background-position: right;
+}
+
+.button-container {
+  
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  
+  
+}
+
+@media (max-width: 768px) {
+  .container-slide {
+    margin-top: 150px;
+    margin-bottom: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .servicesheading {
+    font-size: 30px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+  }
+
+  .image-slide {
+    height: 150px;
+    width: 100%;
+  }
+
+  .inner-column .ubtn {
+    padding: 10px 20px;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+  }
+ 
+}

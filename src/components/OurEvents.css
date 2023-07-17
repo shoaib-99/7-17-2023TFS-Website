@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+.festive-logo {
+    position: absolute;
+    top: 33px;
+    left: 140px;
+    width: 80px; /* Adjust the width as needed */
+    height: 95px; /* Adjust the height as needed */
+    z-index: 999; /* Ensure the logo appears on top of other elements */
+  
+  }
+.card-title {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffffff8e;
+   
+    padding: 5px 0;
+    z-index: 1; /* Bring the title to the front */
+
+    text-transform: uppercase;
+    background-image: linear-gradient(
+      -225deg,
+      #F2CD5C 0%,
+      #FFC312 29%,
+      #ff8800 67%,
+      #FFC312 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+       
+  }
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flip-card {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    flex-basis: calc(30% - 10px); /* Adjust the width of the cards */
+    margin-bottom: 10px; /* Add margin-bottom between the cards */
+    margin-top: 40px;
+}
+  
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+  
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+  
+.flip-card-front {
+    background-color: #f1f1f1;
+    overflow: hidden;
+}
+.flip-card-front img{
+    max-height: 100%;
+}
+.flip-card-back {
+    background-color: #522b4e;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+  
+.card-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+  
+.card-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+  
+.btn {
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+}
+  
+.btn:hover {
+    background-color: #333;
+    color: #f1f1f1;
+}
+  
+.attribute{
+    position: absolute;
+    bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .container-flip {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-left: 60px;
+    }
+  
+    .flip-card {
+      flex-basis: 100%;
+    }
+  }
